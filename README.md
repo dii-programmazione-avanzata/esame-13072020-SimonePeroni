@@ -63,7 +63,4 @@ Il software dovrebbe essere progettato in modo da essere facilmente estendibile.
 
 # Esempio di Sistema Multi-Body 
 
-Ecco qui raffigurato un esempio di sistema multi-body da implementare.
-<img src="./multi_body_esempio.pdf">
-
-https://github.com/andreadelprete/tpa2020_multi_body/blob/master/multi_body_esempio.pdf
+Il file multi_body_esempio.pdf raffigura un esempio di sistema multi-body da implementare.
