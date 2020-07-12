@@ -24,7 +24,7 @@ L'esercizio consiste nella progettazione e nell'implementazione di un software C
 Nessun codice di partenza è fornito. Lo studente deve occuparsi sia della progettazione che dell'implementazione. Si consiglia di sottomettere anche il progetto del software, soprattutto se l'implementazione dovesse essere incompleta (ad esempio per mancanza di tempo). Il progetto sarà tenuto in conto nella valutazione finale. Formati accettabili per il progetto sono formati visuali (come pdf o jpeg) o formati testuali semplici (come txt o rtf). Idealmente l'implementazione dovrebbe includere anche una serie di test per verificare il corretto funzionamento del codice scritto.
 
 # Descrizione
-Scrivere un software ad oggetti per la simulazione di un sistema fisico composto da corpi puntiformi connessi tra loro tramite molle e smorzatori. Il sistema può essere sviluppato in 1d (ipotizzando quindi che tutte i corpi siano allineati su una retta) oppure in 3d. Lo sviluppo del software in 3d darà un punteggio maggiore.
+Scrivere un software ad oggetti per la simulazione di un sistema fisico composto da corpi puntiformi connessi tra loro tramite molle e smorzatori. Il sistema può essere sviluppato in 1d (ipotizzando quindi che tutte i corpi siano allineati su una retta) oppure in 3d. Lo sviluppo del software in 3d darà un punteggio maggiore, ma anche il caso 1d sarà sufficiente a passare l'esame con un buon voto.
 
 Ogni corpo avrà una massa (costante), una posizione, ed una velocità. Posizione e velocità iniziali saranno specificate dall'utente. Posizione e velocità evolveranno nel tempo in base alle forze applicate ai corpi. Ogni corpo può essere connesso ad uno o più altri corpi tramite molle o smorzatori. Una molla/smorzatore connette due corpi, applicandogli forze uguali e opposte. Più in dettaglio, dato:
  * un corpo A con massa mA, posizione pA, velocità vA
@@ -60,3 +60,9 @@ Il software dovrebbe essere progettato in modo da essere facilmente estendibile.
 ### Informazioni Extra
 * la gestione delle liste di elementi può essere implementate tramite array dinamici (quindi utilizzando gli operatori new e delete) oppure mediante `std::vector`. La prima soluzione sarà premiata in termini di punteggio data la sua maggiore difficoltà. 
 * Qualsiasi aspetto non sia esplicitamente specificato nella descrizione dell'esercizio è lasciato alla libera interpretazione dello studente. Scelte più realistiche che portano a software più complesso saranno chiaramente premiata in fase di valutazione.
+
+# Esempio di Sistema Multi-Body 
+
+Ecco qui raffigurato un esempio di sistema multi-body da implementare.
+
+
