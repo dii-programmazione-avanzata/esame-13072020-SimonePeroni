@@ -5,12 +5,12 @@
 #include "PhysicBody.h"
 #include <cassert>
 
-Vector3 PhysicBody::gforce = Vector3(0, 0, -9.81);
+double PhysicBody::gforce = 9.81;
 
 PhysicBody::PhysicBody(double mass, Vector3 position, Vector3 velocity) : position_(position), velocity_(velocity) {
     assert(mass > 0);
     mass_ = mass;
-    netForce_ = gforce * mass_;
+    netForce_ = Vector3(0, 0, 0);
 }
 
 double PhysicBody::getMass() const {
@@ -37,12 +37,15 @@ void PhysicBody::applyForce(Vector3 force) {
     netForce_ += force;
 }
 
-void PhysicBody::step(double dt) {
-    // Integrazione di eulero
+void PhysicBody::step(double dt, bool enableGravity) {
+    // Calcolo accelerazione
     Vector3 acceleration = netForce_ * (1.0 / mass_);
+    if (enableGravity)
+        acceleration += Vector3(0, 0, -9.81);
+    // Integrazione di eulero
     velocity_ = velocity_ + acceleration * dt;
     position_ = position_ + velocity_ * dt + acceleration * (dt * dt * 0.5);
 
     // Reset netForce
-    netForce_ = gforce * mass_;
+    netForce_ = Vector3(0, 0, 0);
 }

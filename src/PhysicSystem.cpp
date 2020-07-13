@@ -36,10 +36,10 @@ Applicable &PhysicSystem::getConnection(int index) {
 }
 
 void PhysicSystem::Simulate(double dt, int N, bool enableGravity, bool enableOutput) {
-    PhysicBody::gforce = enableGravity ? Vector3(0, 0, -9.81) : Vector3(0, 0, 0);
+
     for (int i = 0; i < N; ++i) {
         if (enableOutput)
-            std::cout << "Time: " << dt * i << std::endl;
+            std::cout << "Time: " << dt * (i + 1) << std::endl;
 
         // Applica le forze delle connessioni
         for (int j = 0; j < connectionsCount_; ++j) {
@@ -48,7 +48,7 @@ void PhysicSystem::Simulate(double dt, int N, bool enableGravity, bool enableOut
 
         // Avanza nel tempo
         for (int k = 0; k < bodiesCount_; ++k) {
-            bodies_[k]->step(dt);
+            bodies_[k]->step(dt, enableGravity);
             if (enableOutput) {
                 std::cout << "    Body " << k << " { ";
                 std::cout << "Position: " << bodies_[k]->getPosition().toString() << "; ";

@@ -18,3 +18,8 @@ PhysicBody &Connector::operator[](int index) const {
 bool Connector::isConnected() {
     return A_ != nullptr && B_ != nullptr;
 }
+
+void Connector::connect(PhysicBody &bodyA, PhysicBody &bodyB) {
+    A_ = &bodyA;
+    B_ = &bodyB;
+}

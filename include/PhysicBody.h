@@ -19,7 +19,7 @@ public:
                         Vector3 position = Vector3(0, 0, 0),
                         Vector3 velocity = Vector3(0, 0, 0));
 
-    static Vector3 gforce;
+    static double gforce;
 
     double getMass() const;
 
@@ -33,7 +33,7 @@ public:
 
     void applyForce(Vector3 force);
 
-    void step(double dt);
+    void step(double dt, bool enableGravity);
 };
 
 

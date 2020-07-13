@@ -14,6 +14,8 @@ protected:
 public:
     void connect(PhysicBody &body, int index);
 
+    void connect(PhysicBody &bodyA, PhysicBody &bodyB);
+
     PhysicBody &operator[](int index) const;
 
     bool isConnected();
