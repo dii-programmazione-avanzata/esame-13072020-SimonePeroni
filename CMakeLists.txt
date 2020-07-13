@@ -13,6 +13,12 @@ add_executable(esame_13072020_SimonePeroni
         src/PhysicBody.cpp
         include/PhysicBody.h
         src/Damper.cpp
-        include/Damper.h src/Spring.cpp include/Spring.h src/PhysicSystem.cpp include/PhysicSystem.h include/SpringBase.h include/Applicable.h)
+        include/Damper.h
+        src/Spring.cpp
+        include/Spring.h
+        src/PhysicSystem.cpp
+        include/PhysicSystem.h
+        include/SpringBase.h
+        include/Applicable.h)
 
 include_directories(include)
