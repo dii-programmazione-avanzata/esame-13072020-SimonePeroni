@@ -27,11 +27,9 @@ int main() {
     d3.connect(c, a);
 
     PhysicSystem sys;
-    auto **bodies = new PhysicBody *[3]{&a, &b, &c};
-    auto **connections = new Applicable *[6]{&k1, &d1, &k2, &d2, &k3, &d3};
-    sys.setBodies(bodies, 3);
-    sys.setConnections(connections, 6);
-    sys.Simulate(0.05, 20, true, true);
+    sys.setBodies(new PhysicBody *[3]{&a, &b, &c}, 3);
+    sys.setConnections(new Applicable *[6]{&k1, &d1, &k2, &d2, &k3, &d3}, 6);
+    sys.Simulate(0.05, 20, false, true);
 
     return 0;
 }

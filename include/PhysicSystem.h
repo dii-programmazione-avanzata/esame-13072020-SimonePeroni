@@ -18,6 +18,8 @@ private:
 public:
     PhysicSystem();
 
+    ~PhysicSystem();
+
     void setBodies(PhysicBody **bodies, int count);
 
     void setConnections(Applicable **connections, int count);

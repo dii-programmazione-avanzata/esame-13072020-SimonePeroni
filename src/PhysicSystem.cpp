@@ -58,3 +58,8 @@ void PhysicSystem::Simulate(double dt, int N, bool enableGravity, bool enableOut
         }
     }
 }
+
+PhysicSystem::~PhysicSystem() {
+    delete[] connections_;
+    delete[] bodies_;
+}
