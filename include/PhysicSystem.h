@@ -28,6 +28,13 @@ public:
 
     Applicable &getConnection(int index);
 
+    /**
+     * Simulazione del sistema
+     * @param dt Passo temporale
+     * @param N Numero di step totali
+     * @param enableGravity Specifica se considerare l'accelerazione gravitazionale
+     * @param enableOutput Specifica se è attivato lo l'otuput in console
+     */
     void Simulate(double dt, int N, bool enableGravity = true, bool enableOutput = true);
 };
 

@@ -8,6 +8,9 @@
 #include <math.h>
 #include <string>
 
+/**
+ * Vettore tridimensionale
+ */
 class Vector3 {
 private:
     double x_;

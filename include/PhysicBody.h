@@ -8,6 +8,9 @@
 
 #include "Vector3.h"
 
+/**
+ * Classe che descrive lo stato cinematico di un corpo puntiforme dotato di massa
+ */
 class PhysicBody {
 protected:
     double mass_;
@@ -33,6 +36,11 @@ public:
 
     void applyForce(Vector3 force);
 
+    /**
+     * Simulazione di un avanzamento temporale di passo dt sulla base delle forze applicate dall'ultimo step
+     * @param dt Passo temporale
+     * @param enableGravity Specifica se utilizzare l'accelerazione gravitazionale
+     */
     void step(double dt, bool enableGravity);
 };
 

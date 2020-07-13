@@ -9,6 +9,9 @@
 #include "Connector.h"
 #include "cassert"
 
+/**
+ * Connettori in grado di applicare una forza
+ */
 class Applicable : public Connector {
 public:
     virtual Vector3 evaluateForce() = 0;
